@@ -3,6 +3,7 @@ use std::fs;
 
 mod calorie_counting;
 mod rock_paper_scissors;
+mod rucksack_reorganization;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -14,8 +15,9 @@ struct Args {
 fn main() {
     let args = Args::parse();
     let run: fn(&str) = match args.day {
-        0 => calorie_counting::run,
-        1 => rock_paper_scissors::run,
+        1 => calorie_counting::run,
+        2 => rock_paper_scissors::run,
+        3 => rucksack_reorganization::run,
         _ => panic!("No such day available"),
     };
 
