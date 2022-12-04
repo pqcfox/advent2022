@@ -2,6 +2,7 @@ use clap::Parser;
 use std::fs;
 
 mod calorie_counting;
+mod camp_cleanup;
 mod rock_paper_scissors;
 mod rucksack_reorganization;
 
@@ -18,6 +19,7 @@ fn main() {
         1 => calorie_counting::run,
         2 => rock_paper_scissors::run,
         3 => rucksack_reorganization::run,
+        4 => camp_cleanup::run,
         _ => panic!("No such day available"),
     };
 
