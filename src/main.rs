@@ -5,6 +5,7 @@ mod calorie_counting;
 mod camp_cleanup;
 mod rock_paper_scissors;
 mod rucksack_reorganization;
+mod supply_stacks;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -20,6 +21,7 @@ fn main() {
         2 => rock_paper_scissors::run,
         3 => rucksack_reorganization::run,
         4 => camp_cleanup::run,
+        5 => supply_stacks::run,
         _ => panic!("No such day available"),
     };
 
